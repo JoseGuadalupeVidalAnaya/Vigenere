@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="210.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pp.Controlador">
+    <children>
+        <Label layoutX="15.0" layoutY="15.0" text="Alfabeto" />
+        <TextField fx:id="alfa" layoutX="85.0" layoutY="15.0" prefHeight="25.0" prefWidth="300.0" text="abcdefghijklmnñopqrstuvwxyz" />
+        <Label layoutX="15.0" layoutY="50.0" text="Mensaje" />
+        <TextField fx:id="men" layoutX="85.0" layoutY="50.0" prefHeight="25.0" prefWidth="300.0" />
+        <TextField fx:id="clave" layoutX="85.0" layoutY="90.0" prefHeight="25.0" prefWidth="300.0" />
+        <Label layoutX="15.0" layoutY="90.0" text="Clave" />
+        <Button fx:id="cifrar" defaultButton="true" layoutX="85.0" layoutY="130.0" mnemonicParsing="false" onAction="#metodoCifrar" prefHeight="25.0" prefWidth="110.0" text="Cifrar" />
+        <Button fx:id="decifrar" cancelButton="true" layoutX="275.0" layoutY="130.0" mnemonicParsing="false" onAction="#metodoDecifrar" prefHeight="25.0" prefWidth="110.0" text="Decifrar" />
+        <Label layoutX="15.0" layoutY="170.0" text="Salida" />
+        <TextField fx:id="out" editable="false" layoutX="85.0" layoutY="170.0" prefHeight="25.0" prefWidth="300.0" />
+    </children>
+</AnchorPane>
