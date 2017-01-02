@@ -47,7 +47,13 @@ public class Vigenere
         {
             if (j == clave.length())
                 j = 0;
-            s = s + buscar(clave.charAt(j) + "", mensaje.charAt(i) + "");
+            if (mensaje.charAt(i) == ' ')
+            {
+                s = s + " ";
+                j--;
+            }
+            else
+                s = s + buscar(clave.charAt(j) + "", mensaje.charAt(i) + "");
         }
         mensaje = s;
         return s;
@@ -60,7 +66,13 @@ public class Vigenere
         {
             if (j == clave.length())
                 j = 0;
-            s = s + buscar2(clave.charAt(j) + "", mensaje.charAt(i) + "");
+            if (mensaje.charAt(i) == ' ')
+            {
+                s = s + " ";
+                j--;
+            }
+            else
+                s = s + buscar2(clave.charAt(j) + "", mensaje.charAt(i) + "");
         }
         return s;
     }
@@ -68,8 +80,6 @@ public class Vigenere
     String buscar(String c, String l)
     {
         String s = "";
-        if (l.equals(" "))
-            return " ";
         for (int i = 0; i < alfa.length; i++)
         {
             for (int j = 0; j < alfa[i].length; j++)
@@ -86,8 +96,6 @@ public class Vigenere
     String buscar2(String c, String l)
     {
         String s = "";
-        if (l.equals(" "))
-            return " ";
         for (int i = 0; i < alfa.length; i++)
         {
             for (int j = 0; j < alfa[i].length; j++)
