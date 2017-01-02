@@ -11,6 +11,11 @@ public class Vigenere
     public Vigenere()
     {
         String s = "ABCDEFGHIJKLMNÑOPQRSTUVWXZ";
+        setAlfa(s);
+    }
+
+    void setAlfa(String s)
+    {
         alfa = new String[s.length()][s.length()];
         for (int i = 0; i < alfa.length; i++)
         {
@@ -36,13 +41,12 @@ public class Vigenere
 
     void setClave(String c)
     {
-        clave = c.toUpperCase();
+        clave = c;
     }
 
     void setMensaje(String m)
     {
-        mensaje = m.toUpperCase();
-        mensaje = mensaje.replace(" ", "");
+        mensaje = m;
     }
 
     String cifrar()
@@ -77,6 +81,8 @@ public class Vigenere
     String buscar(String c, String l)
     {
         String s = "";
+        if (l.equals(" "))
+            return " ";
         for (int i = 0; i < alfa.length; i++)
         {
             for (int j = 0; j < alfa[i].length; j++)
@@ -94,6 +100,8 @@ public class Vigenere
     String buscar2(String c, String l)
     {
         String s = "";
+        if (l.equals(" "))
+            return " ";
         for (int i = 0; i < alfa.length; i++)
         {
             for (int j = 0; j < alfa[i].length; j++)
