@@ -28,15 +28,6 @@ public class Vigenere
                 alfa[i][j] = s.charAt(k) + "";
             }
         }
-        for (int i = 0; i < alfa.length; i++)
-        {
-            System.out.println();
-            for (int j = 0; j < alfa.length; j++)
-            {
-                System.out.print(alfa[i][j]);
-            }
-        }
-        System.out.println();
     }
 
     void setClave(String c)
@@ -58,8 +49,6 @@ public class Vigenere
                 j = 0;
             s = s + buscar(clave.charAt(j) + "", mensaje.charAt(i) + "");
         }
-        System.out.println();
-        System.out.println(s);
         mensaje = s;
         return s;
     }
@@ -73,8 +62,6 @@ public class Vigenere
                 j = 0;
             s = s + buscar2(clave.charAt(j) + "", mensaje.charAt(i) + "");
         }
-        System.out.println();
-        System.out.println(s);
         return s;
     }
 
@@ -90,7 +77,6 @@ public class Vigenere
                 if (alfa[i][0].equals(c) && alfa[0][j].equals(l))
                 {
                     s = alfa[i][j];
-                    System.out.println(c + l + alfa[i][j]);
                 }
             }
         }
@@ -109,7 +95,6 @@ public class Vigenere
                 if (alfa[i][0].equals(c) && alfa[i][j].equals(l))
                 {
                     s = alfa[0][j];
-                    System.out.println(c + l + alfa[0][j]);
                 }
             }
         }
