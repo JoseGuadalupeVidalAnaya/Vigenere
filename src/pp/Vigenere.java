@@ -1,8 +1,5 @@
 package pp;
 
-/**
- * Created by jose on 25/12/16.
- */
 public class Vigenere
 {
     String[][] alfa;
@@ -28,8 +25,10 @@ public class Vigenere
                 alfa[i][j] = s.charAt(k) + "";
             }
         }
-        for (int i = 0; i <alfa.length ; i++) {
-            for (int j = 0; j <alfa[i].length ; j++) {
+        for (int i = 0; i < alfa.length; i++)
+        {
+            for (int j = 0; j < alfa[i].length; j++)
+            {
                 System.out.print(alfa[i][j]);
             }
             System.out.println();
