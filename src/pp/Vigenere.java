@@ -28,6 +28,12 @@ public class Vigenere
                 alfa[i][j] = s.charAt(k) + "";
             }
         }
+        for (int i = 0; i <alfa.length ; i++) {
+            for (int j = 0; j <alfa[i].length ; j++) {
+                System.out.print(alfa[i][j]);
+            }
+            System.out.println();
+        }
     }
 
     void setClave(String c)
